@@ -29,4 +29,4 @@ const ProductoraSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("productora", productoraSchema);
+module.exports = mongoose.model("productora", ProductoraSchema);
