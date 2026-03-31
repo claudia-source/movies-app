@@ -1,13 +1,24 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const uri = process.env.MONGODB_URI;
+if (!uri) {
+  throw new Error("La variable de entorno MONGODB_URI no está definida.");
+}
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI);
-    console.log('Base de datos conectada');
-  } catch (error) {
-    console.error('Error:', error.message);
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("✅ Conectado a MongoDB");
+  } catch (err) {
+    console.error("❌ Error de conexión a MongoDB:", err);
     process.exit(1);
   }
 };
 
-module.exports = connectDB;
+export default connectDB;
