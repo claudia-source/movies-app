@@ -1,5 +1,5 @@
 import axios from "axios";
-const API = "http://localhost:3000/api"; 
+const API = "https://movies-app-2oli.onrender.com/api";
 
 // GENERO
 export const getGeneros = () => axios.get(`${API}/genero`);
