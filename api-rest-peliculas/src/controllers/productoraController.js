@@ -1,4 +1,4 @@
-const Productora = require("../models/Productora");
+const Productora = require("../models/productora");
 
 const getProductoras = async (req, res) => {
   try {
