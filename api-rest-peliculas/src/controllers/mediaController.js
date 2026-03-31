@@ -1,8 +1,8 @@
 const Media = require("../models/media");
 const Genero = require("../models/genero");
 const Director = require("../models/director");
-const Productora = require("../models/Productora");
-const Tipo = require("../models/Tipo");
+const Productora = require("../models/productora");
+const Tipo = require("../models/tipo");
 
 // OBTENER TODAS
 const getMedias = async (req, res) => {
